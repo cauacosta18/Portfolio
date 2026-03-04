@@ -6,10 +6,11 @@ header {
     justify-content: space-between;
     position: fixed;
     top: -100px;
-    width: 100%;
+    width: 100vw;
     box-shadow: var(--main-shadow);
     z-index: 5000;
     transition: 1s;
+    align-items: center;
 }
 
 header nav {
