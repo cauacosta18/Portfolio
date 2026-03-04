@@ -1,0 +1,201 @@
+header {
+    display: flex;
+    background-color: var(--background-secundary-color);
+    padding: 20px var(--side-space);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    box-shadow: var(--main-shadow);
+    z-index: 5000;
+    transition: 1s;
+}
+
+header nav {
+    display: flex;
+    position: fixed;
+    top: 100px;
+    left: -200px;
+    transition: 1s;
+    background-color: var(--background-secundary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--main-shadow);
+    padding: 20px;
+    height: 70vh;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+header ul li {
+
+    transition: 1s;
+}
+header nav ul li:hover {
+    transform: scale(1.05);
+}
+
+header nav ul li:active {
+    transform: scale(0.8);
+}
+
+header button {
+    font-family: var(--secundary-font);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+header button:hover {
+    transform: scale(1.05);
+}
+
+header button:active {
+    transform: scale(1);
+}
+
+main {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main > div {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background: linear-gradient(to right, var(--see-through-highlight) 0%, var(--background-main-color) 35%, var(--see-through-highlight) 100%);
+    border-top: 1px solid var(--font-color);
+    padding-top: 100vh;
+    padding-bottom: 100px;
+    margin-top: 1000px;
+    width: 100%;
+    z-index: 1;
+    transition: 2s;
+}
+
+.div-opened {
+    padding-top: 60px;
+    margin-top: 0px;
+}
+
+footer {
+    background-color: var(--background-secundary-color);
+    padding: 40px var(--main-margin);
+    height: 90vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    box-shadow: var(--main-shadow);
+    position: absolute;
+    width: 100%;
+    z-index: 2000;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer ul li {
+    font-size: 1.2em;
+    font-weight: 200;
+    letter-spacing: 10px;
+}
+
+footer ul li a {
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 0.8em;
+}
+
+#shortcut {
+    display: flex;
+    position: fixed;
+    bottom: 15px; right: -200px;
+    background-color: var(--background-secundary-color);
+    box-shadow: var(--main-shadow);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    z-index: 10000;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+#shortcut * {
+    cursor: pointer;
+}
+
+#shortcut:hover {
+    transform: scale(1.05, 1.1);
+}
+
+#shortcut:active {
+    transform: scale(0.95, 0.9);
+}
+
+#shortcut p {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#shortcut span {
+    display: flex;
+    border: 1px solid var(--font-color);
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+}
+
+.shortcut-pressed {
+    transform: scale(0.90, 0.85);
+}
+
+#alert {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    position: fixed;
+    margin: auto;    
+    text-align: center;
+    background-color: var(--background-secundary-color);
+    padding: calc(var(--main-margin)/3);
+    bottom: 20px;
+    left: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--main-shadow);
+    z-index: 5000;
+    bottom: -80px;
+    transition: 1s;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    footer ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #alert {
+        width: 40vw;
+    }
+}
+

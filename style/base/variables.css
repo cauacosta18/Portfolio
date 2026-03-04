@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
+
+:root {
+    --font-color: #DBE3F3;
+    --background-main-color: #25371B;
+    --highlight-color: #395B50;
+    --background-secundary-color: #12190F;
+    --main-shadow: 0 0 20px rgba(0, 0, 0, 0.50);
+    --see-through-highlight: #34422c;
+    --shinning: linear-gradient(135deg, #ffffff00 0%, var(--highlight-color) 35%, #ffffff00 100%);
+    --border-radius: 4px;
+    --font-size: 1.03em;
+
+
+    --main-font: "montserrat";
+    --secundary-font: "poiret one";
+
+    --slides-mines: 10;
+    --slides-java: 3;
+    --slides-cardapio: 11;
+    --slides-colecao: 2;
+    --slides-proxwork: 8;
+    --slides-quiz: 5;
+
+    --slides-line-mines: calc(var(--slides-mines) * 100%);
+    --slides-line-java: calc(var(--slides-java) * 100%);
+    --slides-line-cardapio: calc(var(--slides-cardapio) * 100%);
+    --slides-line-colecao: calc(var(--slides-colecao) * 100%);
+    --slides-line-proxwork: calc(var(--slides-proxwork) * 100%);
+    --slides-line-quiz: calc(var(--slides-quiz) * 100%);
+
+    --to-change-slide-mines: calc(100% / var(--slides-mines));
+    --to-change-slide-java: calc(100% / var(--slides-java));
+    --to-change-slide-cardapio: calc(100% / var(--slides-cardapio));
+    --to-change-slide-colecao: calc(100% / var(--slides-colecao));
+    --to-change-slide-proxwork: calc(100% / var(--slides-proxwork));
+    --to-change-slide-quiz: calc(100% / var(--slides-quiz));
+
+
+}
+
+@media (min-width: 768px) {
+    :root {
+        --main-margin: 4%;
+        --side-space: var(--main-margin);
+    }
+}
+
+@media (min-width: 1800px) {
+    :root {
+
+        --side-space: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --main-margin: 8%;
+        --side-space: var(--main-margin);
+    }
+}
