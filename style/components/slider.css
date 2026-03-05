@@ -151,7 +151,7 @@
     width: 5em;
 }
 
-#slide-btns {
+.slide-btns {
     display: flex;
     position: absolute;
     width: 800px;
@@ -181,7 +181,7 @@
         width: 100%;
     }
 
-    #slide-btns {
+    .slide-btns {
         width: 100%;
         height: 400px;
     }
@@ -194,7 +194,7 @@
         height: 250px;    
     }
 
-    #slide-btns {
+    .slide-btns {
         height: 250px;
     }
 }
@@ -205,7 +205,7 @@
          
     }
 
-    #slide-btns {
+    .slide-btns {
         height: 150px;
     }
 }
