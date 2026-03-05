@@ -15,7 +15,7 @@
     box-shadow: var(--main-shadow);
 }
 
-#projects > section {
+#projects > div {
     border-bottom: 1px solid var(--font-color);
     border-top: 1px solid var(--font-color);
     background-color: var(--background-main-color);

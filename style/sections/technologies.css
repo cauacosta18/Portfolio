@@ -63,6 +63,7 @@
     padding: 10px;
     border-radius: var(--border-radius);
     filter: drop-shadow(var(--main-shadow));
+    transition: 500ms;
 }
 
 #technologies ul li img:hover {
