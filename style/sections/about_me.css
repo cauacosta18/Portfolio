@@ -1,8 +1,11 @@
 #about-me {
+    padding: 0 var(--side-space);
+}
+
+#about-me > div {
     background-color: var(--background-secundary-color);
     display: flex;
     flex-direction: column;
-   
     padding: calc(var(--main-margin)/3);
     gap: 20px;
     border-radius: var(--border-radius);

@@ -19,7 +19,7 @@
     border-bottom: 1px solid var(--font-color);
     border-top: 1px solid var(--font-color);
     background-color: var(--background-main-color);
-    padding: 40px 0;
+    padding: 40px var(--side-space);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +27,6 @@
     gap: 20px;
     width: 100%;
     box-shadow: var(--main-shadow);
-    
 }
 
 
@@ -40,10 +39,6 @@
     width: 100%;
     min-height: 425px;
     position: relative;
-    
-    
-    
-    
 }
 
 .img-left {

@@ -7,6 +7,6 @@ export function setupTabs () {
     })
 
     document.getElementById("tab-2").addEventListener("click", () => {
-        tab_div.style.marginLeft = "-200%";
+        tab_div.style.marginLeft = "calc(-200% - 40px)";
     })
 }
