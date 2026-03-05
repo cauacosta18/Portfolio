@@ -11,9 +11,9 @@
 <body id="body">
     
     <header id="header">
-        <nav id="menu">
+        <nav id="menu-1">
             <ul>
-                <li><a class="nav-link" id="bem-vindo" href="#">BEM VINDO</a></li>
+                <li><a class="nav-link bem-vindo" href="#">BEM VINDO</a></li>
                 <li><a class="nav-link" href="#about-me">SOBRE MIM</a></li>
                 <li><a class="nav-link" href="#technologies">TECNOLOGIAS</a></li>
                 <li><a class="nav-link" href="#soft-skills">SOFT SKILLS</a></li>
@@ -21,8 +21,16 @@
                 <li><a class="nav-link" href="#contact-me">CONTATO</a></li>
             </ul>
         </nav>
-        <button id="menu-btn">&#9776;</button>
-        <h1>Cauã Luiz Costa</h1>
+        <nav id="menu-2">
+            <ul>
+                <li><a class="nav-link bem-vindo" href="#">BEM VINDO</a></li>
+                <li><a class="nav-link" href="#about-me">SOBRE MIM</a></li>
+            </ul>
+        </nav>
+        <div id="header-itens">
+            <button id="menu-btn">&#9776;</button>
+            <h1>Cauã Luiz Costa</h1>
+        </div>
     </header>
     
     <main id="main">
@@ -31,87 +39,95 @@
             <div id="main-title">
                 <p>Bem-Vindo ao</p>
                 <h2>MEU PORTFÓLIO</h2>
-                <div id="play"></div>
+                <div id="main-tab-selection">
+                    <button class="main-tab-btn" id="programming">Programação</button>
+                    <button class="main-tab-btn" id="art">Arte</button>
+                </div>
             </div>
         </section>
 
         <div id="main-div">
+
+            <section id="about-me">
+                <div>
+                    <h3>SOBRE MIM</h3>
+                    <section id="info">
+                        <div>
+                            <h4>CAUÃ LUIZ COSTA</h4>
+                            <p id="idade"></p>
+                        </div>
+                        <div id="resume">
+                            <p>Meu nome é Cauã Luiz Costa. Tive meu primeiro contato com a programação em 2024, quando me matriculei em um curso de informática onde aprendi sobre lógica de programação, bem como HTML e CSS.</p>
+                            <br>
+                            <p>Sempre gostei de desenhar, ilustrar, criar algo e por esse motivo me interessei pelo desenvolvimento web, assim como da programação no geral.</p>
+                        </div>
+                        <img src="img/foto_perfil.jpg" alt="Minha foto">
+                    </section>
+                    <section id="differential">
+                        <h4>DIFERENCIAL</h4>
+                        <ul class="big-grid-col">
+                            <li class="small-grid-col">
+                                <img src="img/certificados/certificado_ingles.jpg" alt="certificado_ingles">
+                                <div class="info-difference">
+                                    <h5>Inglês nível C1</h5>
+                                    <p>Estudei por 3 anos na escola de língua inglesa Influx e me formei com média 9.9.</p>
+                                </div>
+                            </li>
+                            <li class="small-grid-col">
+                                <img src="img/certificados/certificado_excel_intermediario.jpg" alt="certificado_excel_intermediario">
+                                <div class="info-difference">
+                                    <h5>Excel Intermediário</h5>
+                                    <p>Realizei a trilha do Excel da Fundação Bradesco.</p>
+                                </div>
+                            </li>
+                            <li class="small-grid-col">
+                                <img src="img/certificados/certificado_programador_sistemas.jpg" alt="certificado_programador_sistemas">
+                                <div class="info-difference">
+                                    <h5>Programador de sistemas</h5>
+                                    <p>Concluí a primeira etapa do curso Jovem Programador na escola SENAC.</p>
+                                </div>
+                            </li>
+                            <li class="small-grid-col">
+                                <img src="img/certificados/certificadoSCTEC.jpg" alt="certificado_sctec_desenvolvimento_software">
+                                <div class="info-difference">
+                                    <h5>Declaração de participação SCTEC (D.S.)</h5>
+                                    <p>Concluí a trilha rápida de desenvolvimento de software do projeto SCTEC.</p>
+                                </div>
+                            </li>
+                            <li class="small-grid-col">
+                                <img src="img/certificados/certificado_sctec_primeiros_passos.jpg" alt="certificado_sctec_primeiros_passos">
+                                <div class="info-difference">
+                                    <h5>Certificado primeiros passos SCTEC</h5>
+                                    <p>Concluí o curso introdutório de introdução à programação front-end e back-end do programa SCTEC.</p>
+                                </div>
+                            </li>
+                            <li class="small-grid-col">
+                                <img src="img/certificados/certificadoSCTEC2.png" alt="certificado_sctec_analise_dados">
+                                <div class="info-difference">
+                                    <h5>>Declaração de participação SCTEC (A.D.)</h5>
+                                    <p>Concluí a trilha rápida de análise de dados do projeto SCTEC.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+
             <div class="tabs-btns">
                 <div>
-                    <input type="radio" class="tab-input" name="tab-input" id="tab-input-1" checked>
-                    <label for="tab-input-1" class="tab-btn" id="tab-1">Programming</label>
+                    <input type="radio" class="tab-input" name="tab-input" id="tab-input-1">
+                    <label for="tab-input-1" class="tab-btn" id="tab-1">Programação</label>
                 </div>
                 <div>
                     <input type="radio" class="tab-input" name="tab-input" id="tab-input-2">
-                    <label for="tab-input-2" class="tab-btn" id="tab-2">Art</label>
+                    <label for="tab-input-2" class="tab-btn" id="tab-2">Arte</label>
                 </div>
             </div>
+            
             <div id="tabs">
+                
                 <div class="tab">
-                    <section id="about-me">
-                        <div>
-                            <h3>SOBRE MIM</h3>
-                            <section id="info">
-                                <div>
-                                    <h4>CAUÃ LUIZ COSTA</h4>
-                                    <p id="idade"></p>
-                                </div>
-                                <div id="resume">
-                                    <p>Meu nome é Cauã Luiz Costa. Tive meu primeiro contato com a programação em 2024, quando me matriculei em um curso de informática onde aprendi sobre lógica de programação, bem como HTML e CSS.</p>
-                                    <br>
-                                    <p>Sempre gostei de desenhar, ilustrar, criar algo e por esse motivo me interessei pelo desenvolvimento web, assim como da programação no geral.</p>
-                                </div>
-                                <img src="img/foto_perfil.jpg" alt="Minha foto">
-                            </section>
-                            <section id="differential">
-                                <h4>DIFERENCIAL</h4>
-                                <ul class="big-grid-col">
-                                    <li class="small-grid-col">
-                                        <img src="img/certificados/certificado_ingles.jpg" alt="certificado_ingles">
-                                        <div class="info-difference">
-                                            <h5>Inglês nível C1</h5>
-                                            <p>Estudei por 3 anos na escola de língua inglesa Influx e me formei com média 9.9.</p>
-                                        </div>
-                                    </li>
-                                    <li class="small-grid-col">
-                                        <img src="img/certificados/certificado_excel_intermediario.jpg" alt="certificado_excel_intermediario">
-                                        <div class="info-difference">
-                                            <h5>Excel Intermediário</h5>
-                                            <p>Realizei a trilha do Excel da Fundação Bradesco.</p>
-                                        </div>
-                                    </li>
-                                    <li class="small-grid-col">
-                                        <img src="img/certificados/certificado_programador_sistemas.jpg" alt="certificado_programador_sistemas">
-                                        <div class="info-difference">
-                                            <h5>Programador de sistemas</h5>
-                                            <p>Concluí a primeira etapa do curso Jovem Programador na escola SENAC.</p>
-                                        </div>
-                                    </li>
-                                    <li class="small-grid-col">
-                                        <img src="img/certificados/certificadoSCTEC.jpg" alt="certificado_sctec_desenvolvimento_software">
-                                        <div class="info-difference">
-                                            <h5>Declaração de participação SCTEC (D.S.)</h5>
-                                            <p>Concluí a trilha rápida de desenvolvimento de software do projeto SCTEC.</p>
-                                        </div>
-                                    </li>
-                                    <li class="small-grid-col">
-                                        <img src="img/certificados/certificado_sctec_primeiros_passos.jpg" alt="certificado_sctec_primeiros_passos">
-                                        <div class="info-difference">
-                                            <h5>Certificado primeiros passos SCTEC</h5>
-                                            <p>Concluí o curso introdutório de introdução à programação front-end e back-end do programa SCTEC.</p>
-                                        </div>
-                                    </li>
-                                    <li class="small-grid-col">
-                                        <img src="img/certificados/certificadoSCTEC2.png" alt="certificado_sctec_analise_dados">
-                                        <div class="info-difference">
-                                            <h5>>Declaração de participação SCTEC (A.D.)</h5>
-                                            <p>Concluí a trilha rápida de análise de dados do projeto SCTEC.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </section>
-                        </div>
-                    </section>
+                    
                     <section id="technologies">
                         <h3>TECNOLOGIAS</h3>
                         <section>

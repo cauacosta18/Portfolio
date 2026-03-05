@@ -9,6 +9,7 @@
     scroll-behavior: smooth;
     scroll-margin: 80px;
     cursor: default;
+    -webkit-tap-highlight-color: color-mix(in srgb, var(--highlight-color) 20%, transparent);;
 }
 
 *::selection {
