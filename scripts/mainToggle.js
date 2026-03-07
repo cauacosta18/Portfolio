@@ -22,9 +22,15 @@ function ToggleMainDiv (event) {
 
         let main_div = document.getElementById("main-div");
         main_div.classList.remove("div-opened");
+
+        document.getElementById("programming").style.pointerEvents = "none";
+        document.getElementById("art").style.pointerEvents = "none";
+
         setTimeout(function(){
             main_div.style.display = "none";
-        }, 750);
+            document.getElementById("programming").style.pointerEvents = "initial";
+            document.getElementById("art").style.pointerEvents = "initial";
+        }, 2000);
 
         let footer = document.getElementById("contact-me");
         footer.style.display = "none";
