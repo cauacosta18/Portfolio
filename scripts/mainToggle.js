@@ -1,17 +1,18 @@
 let main_div_active = false;
-let programming_text = "<p>Meu nome é Cauã Luiz Costa. Tive meu primeiro contato com a programação em 2024, quando me matriculei em um curso de informática onde aprendi sobre lógica de programação, bem como HTML e CSS.</p><br><p>Sempre gostei de desenhar, ilustrar, criar algo e por esse motivo me interessei pelo desenvolvimento web, assim como da programação no geral.</p>";
-let art_text = "";
 
 function ToggleMainDiv (event) {
 
+    let tab_div = document.getElementById("tabs");
+
     if (event.currentTarget.id === "programming") {
+        tab_div.style.marginLeft = "0";
         document.getElementById("tab-input-1").checked = true;
+        document.getElementById("about-me-texts").style.marginLeft = "0";
 
-        document.getElementById("resume").innerHTML = programming_text;
     } else if (event.currentTarget.id === "art") {
+        tab_div.style.marginLeft = "calc(-200% - 40px)";
         document.getElementById("tab-input-2").checked = true;
-
-        document.getElementById("resume").innerHTML = art_text;
+        document.getElementById("about-me-texts").style.marginLeft = "calc(-100% - 20px)";
     }
 
     
