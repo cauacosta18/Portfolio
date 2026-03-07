@@ -10,7 +10,7 @@ export function setupAlert () {
             alertDiv.style.bottom = "20px";
 
             setTimeout(function () {
-                alertDiv.style.bottom = "-80px";
+                alertDiv.style.bottom = "-200px";
             }, 3000)
         })
     });

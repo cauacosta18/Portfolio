@@ -14,6 +14,7 @@
     width: 100%;
     
     box-shadow: var(--main-shadow);
+    padding: 0 var(--side-space);
 }
 
 #technologies section div {
@@ -21,7 +22,6 @@
     flex-direction: column;
     gap: 20px;
     padding: 10px 10px;
-    margin: 0 var(--side-space);
 
 }
 
@@ -45,7 +45,7 @@
 #technologies section ul li {
     border: 10px solid var(--background-secundary-color);
     width: fit-content;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;

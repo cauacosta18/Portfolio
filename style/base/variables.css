@@ -3,7 +3,7 @@
 :root {
     --font-color: #DBE3F3;
     --background-main-color: #25371B;
-    --highlight-color: #395B50;
+    --highlight-color: #395b50;
     --background-secundary-color: #12190F;
     --main-shadow: 0 0 20px rgba(0, 0, 0, 0.50);
     --see-through-highlight: #34422c;
@@ -41,7 +41,7 @@
 
 @media (min-width: 768px) {
     :root {
-        --main-margin: 4%;
+        --main-margin: 4vw;
         --side-space: var(--main-margin);
     }
 }
@@ -49,13 +49,13 @@
 @media (min-width: 1800px) {
     :root {
 
-        --side-space: 20%;
+        --side-space: 20vw;
     }
 }
 
 @media (max-width: 768px) {
     :root {
-        --main-margin: 8%;
+        --main-margin: 8vw;
         --side-space: var(--main-margin);
     }
 }

@@ -27,7 +27,6 @@
     gap: 20px;
     width: 100%;
     box-shadow: var(--main-shadow);
-    
 }
 
 
@@ -40,10 +39,6 @@
     width: 100%;
     min-height: 425px;
     position: relative;
-    
-    
-    
-    
 }
 
 .img-left {

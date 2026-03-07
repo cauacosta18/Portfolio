@@ -10,6 +10,14 @@ header {
     box-shadow: var(--main-shadow);
     z-index: 5000;
     transition: 1s;
+    align-items: center;
+}
+
+#header-itens {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    transition: 1;
 }
 
 header nav {
@@ -24,6 +32,7 @@ header nav {
     padding: 20px;
     height: 70vh;
     text-align: center;
+    justify-content: space-between;
 }
 
 header nav ul {
@@ -41,6 +50,7 @@ header nav ul li:hover {
 
 header nav ul li:active {
     transform: scale(0.8);
+    
 }
 
 header button {
@@ -128,6 +138,7 @@ footer ul li a {
     box-shadow: var(--main-shadow);
     border-radius: var(--border-radius);
     padding: 10px;
+    padding-right: 15px;
     z-index: 10000;
     cursor: pointer;
     transition: 250ms;
@@ -180,7 +191,7 @@ footer ul li a {
     border-radius: var(--border-radius);
     box-shadow: var(--main-shadow);
     z-index: 5000;
-    bottom: -80px;
+    bottom: -200px;
     transition: 1s;
     justify-content: center;
 }

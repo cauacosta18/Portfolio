@@ -2,6 +2,19 @@ let main_div_active = false;
 
 function ToggleMainDiv (event) {
 
+    let tab_div = document.getElementById("tabs");
+
+    if (event.currentTarget.id === "programming") {
+        tab_div.style.marginLeft = "0";
+        document.getElementById("tab-input-1").checked = true;
+        document.getElementById("about-me-texts").style.marginLeft = "0";
+
+    } else if (event.currentTarget.id === "art") {
+        tab_div.style.marginLeft = "calc(-200% - 40px)";
+        document.getElementById("tab-input-2").checked = true;
+        document.getElementById("about-me-texts").style.marginLeft = "calc(-100% - 20px)";
+    }
+
     
     if (main_div_active) {
 
@@ -25,9 +38,12 @@ function ToggleMainDiv (event) {
         let header = document.getElementById("header");
         header.style.top = "-100px";
 
-        let nav = document.getElementById("menu");
-        nav.style.display = "none";
+        let nav1 = document.getElementById("menu-1");
+        nav1.style.display = "none";
         
+        let nav2 = document.getElementById("menu-2");
+        nav2.style.display = "none";
+
     } else {
 
         main_div_active = true;
@@ -51,22 +67,41 @@ function ToggleMainDiv (event) {
         let header = document.getElementById("header");
         header.style.top = "0px";
 
-        let nav = document.getElementById("menu");
-        nav.style.display = "flex";
+        let nav1 = document.getElementById("menu-1");
+        nav1.style.display = "flex";
         
+        let nav2 = document.getElementById("menu-2");
+        nav2.style.display = "flex";
     }
 }
 
 function setUpMainToggle () {
-    document.getElementById("main-title").addEventListener("click", (event) => {
-        ToggleMainDiv(event);
+
+    // document.getElementById("main-title").addEventListener("click", (event) => {
+    //     ToggleMainDiv(event);
+    // });
+
+    let main_tab_btns = document.querySelectorAll(".main-tab-btn");
+
+    main_tab_btns.forEach(main_tab_btn => {
+        main_tab_btn.addEventListener("click", (event) => {
+            ToggleMainDiv(event);
+        });
+    });
+
+    let start_links = document.querySelectorAll(".bem-vindo");
+
+    start_links.forEach(start_link => {
+
+        start_link.addEventListener("click", (event) => {
+                     
+            ToggleMainDiv(event);
+        
+        });
+        
     });
     
-    document.getElementById("bem-vindo").addEventListener("click", (event) => {
     
-        ToggleMainDiv(event);
-    
-    });
     
 }
 
