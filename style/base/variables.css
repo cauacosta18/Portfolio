@@ -5,6 +5,7 @@
     --background-main-color: #25371B;
     --highlight-color: #395b50;
     --background-secundary-color: #12190F;
+    --background-secundary-color-opacity: rgba(18, 26, 15, 0.75);
     --main-shadow: 0 0 20px rgba(0, 0, 0, 0.50);
     --see-through-highlight: #34422c;
     --shinning: linear-gradient(135deg, #ffffff00 0%, var(--highlight-color) 35%, #ffffff00 100%);

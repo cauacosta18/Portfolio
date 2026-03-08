@@ -54,6 +54,16 @@
     background-color: var(--font-color);
     flex: 1 1 auto;
     border-radius: var(--border-radius);
+    transition: 250ms;
+    cursor: pointer;
+}
+
+#technologies section ul li:hover {
+    border: 7px solid var(--background-secundary-color);
+}
+
+#technologies section ul li:active {
+    border: 12px solid var(--background-secundary-color);
 }
 
 #technologies ul li img {
@@ -64,10 +74,6 @@
     border-radius: var(--border-radius);
     filter: drop-shadow(var(--main-shadow));
     transition: 500ms;
-}
-
-#technologies ul li img:hover {
-    transform: scale(1.05);
 }
 
 #technology-selected {

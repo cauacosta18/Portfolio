@@ -30,7 +30,7 @@ function ToggleMainDiv (event) {
             main_div.style.display = "none";
             document.getElementById("programming").style.pointerEvents = "initial";
             document.getElementById("art").style.pointerEvents = "initial";
-        }, 2000);
+        }, 1500);
 
         let footer = document.getElementById("contact-me");
         footer.style.display = "none";

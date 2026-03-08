@@ -1,6 +1,15 @@
 let menu_1_active = false;
 let menu_2_active = false;
 
+function isMobile () {
+    return navigator.maxTouchPoints > 0 || /Android|iPhone/i.test(navigator.userAgent);
+    
+}
+
+if (isMobile()) {
+    document.getElementById("shortcut").style.display = "none";
+}
+
 function SelectedTab () {
     let tabs_inputs = document.querySelectorAll(".tab-input");
     
@@ -103,6 +112,7 @@ export function setupMenuEvents () {
         ToggleMenu(SelectedTab()); 
         
     });
+
 
     let tabs_btns = document.querySelectorAll(".tab-btn");
 

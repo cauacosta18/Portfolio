@@ -25,12 +25,12 @@ header nav {
     position: fixed;
     top: 100px;
     left: -200px;
-    transition: 1s;
+    transition: 500ms;
     background-color: var(--background-secundary-color);
     border-radius: var(--border-radius);
     box-shadow: var(--main-shadow);
     padding: 20px;
-    height: 70vh;
+    height: fit-content;
     text-align: center;
     justify-content: space-between;
 }
@@ -39,6 +39,7 @@ header nav ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 40px;
 }
 header ul li {
 
@@ -192,7 +193,7 @@ footer ul li a {
     box-shadow: var(--main-shadow);
     z-index: 5000;
     bottom: -200px;
-    transition: 1s;
+    transition: 500ms;
     justify-content: center;
 }
 

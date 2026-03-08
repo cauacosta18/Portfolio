@@ -1,18 +1,30 @@
 
 export function setupAlert () {
-    let buttons = document.querySelectorAll(".sharing");
+
+    let alert_ativado = false;
     
-    buttons.forEach(button => {
-        button.addEventListener("click", (event)=> {            
-
+    let technologies = document.querySelectorAll(".technology");
+    
+    technologies.forEach(technology => {
+        technology.addEventListener("click", (event) => {
+            
             let alertDiv = document.getElementById("alert");
-            alertDiv.textContent = "Link ainda não funcional."
-            alertDiv.style.bottom = "20px";
+            alertDiv.textContent = event.currentTarget.firstElementChild.title;
 
-            setTimeout(function () {
-                alertDiv.style.bottom = "-200px";
-            }, 3000)
+            if (!alert_ativado) {
+                
+                
+                alertDiv.style.bottom = "20px";
+    
+                alert_ativado = true;
+                
+                setTimeout(function () {
+                    alertDiv.style.bottom = "-200px";
+                    alert_ativado = false;
+                }, 3000);
+            }
+
         })
-    });
+    })
     
 }

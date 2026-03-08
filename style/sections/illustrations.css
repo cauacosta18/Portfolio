@@ -1,0 +1,121 @@
+#illustrations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--side-space);
+    gap: 20px;
+    height: 100%;
+}
+
+#illustrations h4 {
+    font-size: 2.5em;
+}
+
+#illustrations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 0.5em;
+    background-color: var(--background-secundary-color);
+    padding: 20px;
+    box-shadow: var(--main-shadow);
+    border-radius: var(--border-radius);
+    height: 100%;
+    
+}
+
+.collumn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.collumn div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    transition: 250ms;
+    overflow: hidden;
+    
+}
+
+.collumn h5 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+    background-color: var(--background-secundary-color-opacity);
+    font-weight: 700;
+    
+    transition: 250ms;
+    bottom: -100px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.75em;
+}
+
+#illustrations img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.collumn div:hover {
+    transform: scale(1.025);
+}
+
+.collumn div:active {
+    transform: scale(0.99);
+}
+
+#shuffle {
+    background-color: var(--background-secundary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--main-shadow);
+    padding: 10px;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+#shuffle:hover {
+    transform: scale(1.1);
+}
+
+#shuffle:active {
+    transform: scale(0.9);
+}
+
+#image-selected {
+    position: fixed;
+    z-index: 4000;
+    top: 60px;
+    width: 100%;
+    height: calc(100% - 60px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-secundary-color-opacity);
+}
+
+#image-selected img {
+    max-height: 70%;
+    max-width: 90vw;
+    box-shadow: var(--main-shadow);
+}
+
+@media (max-width: 600px) {
+    #illustrations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #illustrations h4 {
+        font-size: 1.75em;
+    }
+}

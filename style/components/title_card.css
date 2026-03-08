@@ -16,10 +16,6 @@
     
 }
 
-#title-card * {
-    cursor: pointer;
-}
-
 #play {
     display: flex;
     content: "";
@@ -44,17 +40,8 @@
     word-break: normal;
     font-size: 2.2em;
     letter-spacing: 10px;
+    margin-right: -10px;
 }
-
-
-/* #main-title:hover {
-    transform: scale(1.1);
-    
-}
-
-#main-title:active {
-    transform: scale(0.5);
-} */
 
 #main-tab-selection {
     display: flex;
@@ -69,11 +56,12 @@
     justify-content: center;
     align-items: center;
     background-color: var(--background-secundary-color);
-    width: 8em;
+    width: fit-content;
     padding: 10px;
     border-radius: var(--border-radius);
     box-shadow: var(--main-shadow);
     transition: 250ms;
+    cursor: pointer;
 
 }
 
@@ -87,7 +75,7 @@
 
 @media (max-width: 375px) {
     #title-card {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     #main-tab-selection {

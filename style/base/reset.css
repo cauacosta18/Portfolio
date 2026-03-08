@@ -8,7 +8,6 @@
     text-decoration: none;
     scroll-behavior: smooth;
     scroll-margin: 80px;
-    cursor: default;
     -webkit-tap-highlight-color: color-mix(in srgb, var(--highlight-color) 20%, transparent);;
 }
 
@@ -46,6 +45,15 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--secundary-font);
     letter-spacing: 2px;
     text-transform: uppercase;
+    cursor: default;
+}
+
+p {
+    cursor: default;
+}
+
+li {
+    cursor: default;
 }
 
 ul {
