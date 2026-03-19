@@ -10,9 +10,14 @@ function ToggleMainDiv (event) {
         document.getElementById("about-me-texts").style.marginLeft = "0";
 
     } else if (event.currentTarget.id === "art") {
-        tab_div.style.marginLeft = "calc(-200% - 40px)";
+        tab_div.style.transform = "translateX(-100%)"
         document.getElementById("tab-input-2").checked = true;
-        document.getElementById("about-me-texts").style.marginLeft = "calc(-100% - 20px)";
+        document.getElementById("about-me-texts").style.marginLeft = "calc(-100%)";
+        
+    } else if (event.currentTarget.id === "design") {
+        tab_div.style.transform = "translateX(-200%)"
+        document.getElementById("tab-input-3").checked = true;
+        document.getElementById("about-me-texts").style.marginLeft = "calc(-200%)";
     }
 
     

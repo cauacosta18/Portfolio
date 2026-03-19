@@ -30,6 +30,14 @@
                 <li><a class="nav-link" href="#contact-me">CONTATO</a></li>
             </ul>
         </nav>
+        <nav id="menu-3">
+            <ul>
+                <li><a class="nav-link bem-vindo" href="#">BEM VINDO</a></li>
+                <li><a class="nav-link" href="#about-me">SOBRE MIM</a></li>
+                <li><a class="nav-link" href="#designs">DESIGNS</a></li>
+                <li><a class="nav-link" href="#contact-me">CONTATO</a></li>
+            </ul>
+        </nav>
         <div id="header-itens">
             <button id="menu-btn">&#9776;</button>
             <h1>Cauã Luiz Costa</h1>
@@ -45,6 +53,7 @@
                 <div id="main-tab-selection">
                     <button class="main-tab-btn" id="programming">Programação</button>
                     <button class="main-tab-btn" id="art">Arte</button>
+                    <button class="main-tab-btn" id="design">Design</button>
                 </div>
             </div>
         </section>
@@ -64,6 +73,8 @@
                                 <p>Meu nome é Cauã Luiz Costa. Tive meu primeiro contato com a programação em 2024, quando me matriculei em um curso de informática onde aprendi sobre lógica de programação, bem como HTML e CSS.<br><br>Sempre gostei de desenhar, ilustrar, criar algo e por esse motivo me interessei pelo desenvolvimento web, assim como da programação no geral.</p>
                                 
                                 <p>Meu nome é Cauã Luiz Costa. Sempre gostei de desenhar, mais especificamente ilustrações, gosto de pensar em uma história por trás dos meus desenhos.<br><br>Ao longo do tempo ganhei familiaridade pelo desenho digital, se tornando meu meio favorito de ilustrar.</p>
+
+                                <p>Meu nome é Cauã Luiz Costa. Sempre gostei de desenhar e junto a isso me interessei pela área de design.<br><br>Ao longo do tempo, desenvolvi familiaridade com ferramentas e práticas e convenções.</p>
                             </div>
                         </div>
                         <img src="img/foto_perfil.jpg" alt="Minha foto">
@@ -79,6 +90,10 @@
                 <div>
                     <input type="radio" class="tab-input" name="tab-input" id="tab-input-2">
                     <label for="tab-input-2" class="tab-btn" id="tab-2">Arte</label>
+                </div>
+                <div>
+                    <input type="radio" class="tab-input" name="tab-input" id="tab-input-3">
+                    <label for="tab-input-3" class="tab-btn" id="tab-3">Design</label>
                 </div>
             </div>
            
@@ -129,6 +144,13 @@
                                     <div class="info-difference">
                                         <h5>Declaração de participação SCTEC (A.D.)</h5>
                                         <p>Concluí a trilha rápida de análise de dados do projeto SCTEC.</p>
+                                    </div>
+                                </li>
+                                <li class="small-grid-col">
+                                    <img class="certificate" src="img/certificados/certificado_programador_web.png" alt="certificado_programador_web">
+                                    <div class="info-difference">
+                                        <h5>Programador web</h5>
+                                        <p>Concluí a segunda etapa do curso Jovem Programador na escola SENAC.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -524,10 +546,10 @@
                     </section>
                 </div>
                 <div class="tab">
-                    <section id="illustrations">
+                    <section class="art-collection" id="illustrations">
                         <h4>Ilustrações</h4>
-                        <button id="shuffle">Aleatorizar</button>
-                        <div id="illustrations-grid">
+                        <button class="shuffle" id="shuffle-illustration">Aleatorizar</button>
+                        <div class="art-collection-grid">
                             <div class="collumn">
                                 <div>
                                     <img src="img/arte/brawl/boogeyman-fang-1.png" alt="boogeyman-fang-1">
@@ -562,7 +584,6 @@
                                     <h5>Ghost Ronin Fang 2</h5>
                                 </div>
                             </div>
-
                             <div class="collumn">
                                 <div>
                                     <img src="img/arte/brawl/ghost-ronin-fang-3.png" alt="ghost-ronin-fang-3">
@@ -597,7 +618,6 @@
                                     <h5>Bigfoot Redesign</h5>
                                 </div>
                             </div>
-
                             <div class="collumn">
                                 <div>
                                     <img src="img/arte/ilustracao/comu-arte.jpg" alt="comu-arte">
@@ -635,6 +655,56 @@
                         </div>
                     </section>
                 </div>
+                <div class="tab">
+                    <section class="art-collection" id="designs">
+                        <h4>Designs</h4>
+                        <button class="shuffle" id="shuffle-design">Aleatorizar</button>
+                        <div class="art-collection-grid">
+                            <div class="collumn design">
+                                <div>
+                                    <img src="img/design/gremio/gremio-azul.png" alt="logo-gremio-1">
+                                    <h5>Logo Grêmio Estudantil 1</h5>
+                                </div>
+                                <div>
+                                    <img src="img/design/gremio/gremio-laranja.png" alt="logo-gremio-2">
+                                    <h5>Logo Grêmio Estudantil 2</h5>
+                                </div>
+                                <div>
+                                    <img src="img/design/interclasse/interclasse-1.png" alt="logo-interclasse-1">
+                                    <h5>Logo Camisa Interclassse 1</h5>
+                                </div>
+                            </div>
+                            <div class="collumn design">
+                                <div>
+                                    <img src="img/design/interclasse/interclasse-2.png" alt="logo-interclasse-2">
+                                    <h5>Logo Camisa Interclassse 2</h5>
+                                </div>
+                                <div>
+                                    <img src="img/design/interclasse/interclasse-3.png" alt="logo-interclasse-3">
+                                    <h5>Logo Camisa Interclassse 3</h5>
+                                </div>
+                                <div>
+                                    <img src="img/design/interclasse/interclasse-4.png" alt="logo-interclasse-4">
+                                    <h5>Logo Camisa Interclassse 4</h5>
+                                </div>
+                            </div>
+                            <div class="collumn design">
+                                <div>
+                                    <img src="img/design/interclasse/interclasse-5.png" alt="logo-interclasse-5">
+                                    <h5>Logo Camisa Interclassse 5</h5>
+                                </div>
+                                <div>
+                                    <img src="img/design/terceirao/terceirao-1.png" alt="logo-terceirao-1">
+                                    <h5>Logo Camisa Terceirão 1</h5>
+                                </div>
+                                <div>
+                                    <img src="img/design/terceirao/terceirao-2.png" alt="logo-terceirao-2">
+                                    <h5>Logo Camisa Terceirão 2</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
             
         </div>
@@ -646,6 +716,7 @@
             <li>GITHUB <a href="https://github.com/cauacosta18" target="_blank" rel="next">github.com/cauacosta18</a></li>
             <li>LINKTR.EE <a href="https://linktr.ee/caua_costa" target="_blank" rel="next">linktr.ee/caua_costa</a></li>
             <li>INSTAGRAM <a href="https://www.instagram.com/caua_costa18/?next=%2F" target="_blank" rel="next">caua_costa18</a></li>
+            <li>CURRÍCULO <a href="img/certificados/CAUÃ LUIZ COSTA.pdf" download>Download</a></li>
         </ul>
     </footer>
     <div id="alert">

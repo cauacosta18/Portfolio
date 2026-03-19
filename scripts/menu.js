@@ -1,5 +1,6 @@
 let menu_1_active = false;
 let menu_2_active = false;
+let menu_3_active = false;
 
 function isMobile () {
     return navigator.maxTouchPoints > 0 || /Android|iPhone/i.test(navigator.userAgent);
@@ -21,6 +22,8 @@ function SelectedTab () {
                 return 1;
             } else if (tab_input.id === "tab-input-2") {
                 return 2;
+            } else if (tab_input.id === "tab-input-3") {
+                return 3;
             } else {
                 return 1;
             }
@@ -38,6 +41,8 @@ function ToggleMenu (tab) {
         menu_active = menu_1_active;
     } else if (tab === 2) {
         menu_active = menu_2_active;
+    } else if (tab === 3) {
+        menu_active = menu_3_active;
     } else {
 
     }
@@ -54,8 +59,8 @@ function ToggleMenu (tab) {
         menu_1_active = menu_active;
     } else if (tab === 2) {
         menu_2_active = menu_active;
-    } else {
-
+    } else if (tab === 3) {
+        menu_3_active = menu_active;
     }
 
 }
@@ -69,21 +74,22 @@ export function setupMenuEvents () {
     })
 
     document.addEventListener("keydown", (event) => {
-        
-        if (event.key === "m" ) {
 
+        
+        
+        if (event.key.toLowerCase() === "m" ) {
+            
             let shortcut = document.getElementById("shortcut");
             shortcut.classList.add("shortcut-pressed");
             
             ToggleMenu(SelectedTab());
-
+            
         }
     })
-
+    
     document.addEventListener("keyup", (event) => {
-        if (event.key === "m" ) {
-
-
+        if (event.key.toLowerCase() === "m" ) {
+            
             let shortcut = document.getElementById("shortcut");
             shortcut.classList.remove("shortcut-pressed");
             

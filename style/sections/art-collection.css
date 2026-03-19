@@ -1,4 +1,4 @@
-#illustrations {
+.art-collection {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,11 +7,11 @@
     height: 100%;
 }
 
-#illustrations h4 {
+.art-collection h4 {
     font-size: 2.5em;
 }
 
-#illustrations-grid {
+.art-collection-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
@@ -59,12 +59,16 @@
     font-size: 0.75em;
 }
 
-#illustrations img {
+.art-collection img {
     display: flex;
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
     cursor: pointer;
+}
+
+#designs img {
+    transform: scale(0.8);
 }
 
 .collumn div:hover {
@@ -75,7 +79,7 @@
     transform: scale(0.99);
 }
 
-#shuffle {
+.shuffle {
     background-color: var(--background-secundary-color);
     border-radius: var(--border-radius);
     box-shadow: var(--main-shadow);
@@ -84,11 +88,11 @@
     cursor: pointer;
 }
 
-#shuffle:hover {
+.shuffle:hover {
     transform: scale(1.1);
 }
 
-#shuffle:active {
+.shuffle:active {
     transform: scale(0.9);
 }
 
@@ -107,15 +111,14 @@
 #image-selected img {
     max-height: 70%;
     max-width: 90vw;
-    box-shadow: var(--main-shadow);
 }
 
 @media (max-width: 600px) {
-    #illustrations-grid {
+    .art-collection-grid {
         grid-template-columns: 1fr;
     }
 
-    #illustrations h4 {
+    .art-collection h4 {
         font-size: 1.75em;
     }
 }

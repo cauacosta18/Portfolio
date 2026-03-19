@@ -2,6 +2,7 @@ let image_selected = document.getElementById("image-selected");
 let img = document.getElementById("zoom-img");
 
 let max_img_per_collumn = 8;
+let max_img_per_collumn_design = 3;
 
 let scale = 1;
 let offsetX = 0;
@@ -17,32 +18,72 @@ function shuffle(array) {
   return array;
 }
 
-function setupCollumns (itens) {
+function setupCollumnsDesign (itens) {
 
-    let collumns = document.querySelectorAll(".collumn");
+    let all_collumns = document.querySelectorAll(".collumn");
+
+    let collumns = []
+
+    all_collumns.forEach(collumn => {
+        if (collumn.classList.contains("design")) {
+            collumns.push(collumn)
+        }
+    })
 
     let item_collumns = [[], [], []];
+
     
-    for (let i = 0; i < max_img_per_collumn; i++) {
-        item_collumns[0].push(itens[i]);   
+    for (let i = 0; i < max_img_per_collumn_design; i++) {
+        if (itens[i].classList.contains("design")){
+            item_collumns[0].push(itens[i]);
+            if (itens[i + max_img_per_collumn_design]) item_collumns[1].push(itens[i + max_img_per_collumn_design]);
+            if (itens[i + max_img_per_collumn_design * 2]) item_collumns[2].push(itens[i + max_img_per_collumn_design * 2]);
+        }
     }
-    for (let i = max_img_per_collumn; i < (max_img_per_collumn * 2); i++) {
-        item_collumns[1].push(itens[i]);   
-    }
-    for (let i = (max_img_per_collumn * 2); i < (max_img_per_collumn * 3); i++) {
-        item_collumns[2].push(itens[i]);   
-    }
+    
 
     collumns.forEach((collumn, index) => {
-
+ 
         collumn.innerHTML = "";
 
-        item_collumns[index].forEach (item => {
- 
-            collumn.append(item);       
+            for (let item of item_collumns[index]) {
+                collumn.append(item)
+            }
             
-        })
+    });
+}
+
+function setupCollumnsIllustration (itens) {
+
+    let all_collumns = document.querySelectorAll(".collumn");
+
+    let collumns = []
+
+    all_collumns.forEach(collumn => {
+        if (!collumn.classList.contains("design")) {
+            collumns.push(collumn)
+        }
+    })
+
+    let item_collumns = [[], [], []];
+
+    for (let i = 0; i < max_img_per_collumn; i++) {
+        if (!itens[i].classList.contains("design")){
+            item_collumns[0].push(itens[i]);
+            if (itens[i + max_img_per_collumn]) item_collumns[1].push(itens[i + max_img_per_collumn]);
+            if (itens[i + max_img_per_collumn * 2]) item_collumns[2].push(itens[i + max_img_per_collumn * 2]);
+        }
+    }
     
+    collumns.forEach((collumn, index) => {
+ 
+        collumn.innerHTML = "";        
+
+        for (let item of item_collumns[index]) {
+            
+            collumn.append(item)
+        }
+            
     });
 }
 
@@ -57,10 +98,16 @@ function setupItens () {
     collumns.forEach(collumn => {
         
         for (let div of collumn.children) {
+
+            if (collumn.classList.contains("design")) {
+                div.classList.add("design")
+            }            
+            
             itens.push(div);
+
         }
         
-    });
+    });    
 
     return itens;
 }
@@ -132,13 +179,28 @@ function setuptDragging () {
 
 }
 
-export function setupIllustrations () {
+export function setupCollumnItens () {
 
     let itens = setupItens();    
+    
+    let illustrations = []
+    let designs = []
 
-    itens = shuffle(itens);
+    itens.forEach(item => {
+        
+        if (item.classList.contains("design")) {            
+            designs.push(item)
+        } else {
+            illustrations.push(item)
+        }
+    })    
 
-    setupCollumns(itens);    
+    
+    let shuffled_designs = shuffle(designs);
+    let shuffled_illustrations = shuffle(illustrations);
+
+    setupCollumnsDesign(shuffled_designs);    
+    setupCollumnsIllustration(shuffled_illustrations);    
 
     let certificates = document.querySelectorAll(".small-grid-col");
 
@@ -202,9 +264,13 @@ export function setupIllustrations () {
         
     })
 
-    document.getElementById("shuffle").addEventListener("click", () => {
-        itens = shuffle(itens);
-        setupCollumns(itens);
+    document.getElementById("shuffle-illustration").addEventListener("click", () => {
+        illustrations = shuffle(illustrations);        
+        setupCollumnsIllustration(illustrations);
+    })
+    document.getElementById("shuffle-design").addEventListener("click", () => {
+        designs = shuffle(designs);        
+        setupCollumnsDesign(designs);
     })
 
     if (!isMobile()) {

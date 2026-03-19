@@ -51,15 +51,16 @@
 #resume div {
     display: flex;
     flex-direction: row;
-    width: calc(200% + 20px );
+    width: calc(300%);
     transition: 1s;
-    gap: 20px;
+    
 }
 
 #resume p {
     font-size: 0.8em;
     width: 100%;
     display: flex;
+    padding: 0 10px;
 }
 
 @media (max-width: 768px) {

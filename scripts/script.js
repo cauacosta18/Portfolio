@@ -4,14 +4,14 @@ import {setupMenuEvents} from "./menu.js";
 import {addEventListeners} from "./slider.js";
 import { setupAlert } from "./alert.js";
 import { setupTabs } from "./tabs.js";
-import { setupIllustrations } from "./illustration.js";
+import { setupCollumnItens } from "./collumnItens.js";
 
 setupAge();
 setupMenuEvents();
 addEventListeners();
 setupAlert();
 setupTabs();
-setupIllustrations();
+setupCollumnItens();
 setupMainToggle();
 
 
