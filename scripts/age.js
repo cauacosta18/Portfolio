@@ -1,5 +1,5 @@
 function setupAge() {
-    let date_of_birth = new Date(2008, 4, 18);
+    let date_of_birth = new Date(2008, 3, 18);
     let today = new Date();
 
     let age = today.getFullYear() - date_of_birth.getFullYear();
