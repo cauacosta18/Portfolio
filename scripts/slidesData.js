@@ -6,7 +6,10 @@ const available_slides = [
     new Slide("cardapio",11,0),
     new Slide("proxwork",8,0),
     new Slide("colecao",2,0),
-    new Slide("quiz",5,0)
+    new Slide("quiz",5,0),
+    new Slide("iaprendendo",19,0),
+    new Slide("picklette",12,0),
+    new Slide("agroajuda",38,0)
 ]
 
 export default available_slides;

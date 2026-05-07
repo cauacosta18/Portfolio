@@ -4,7 +4,7 @@
     justify-content: center;
     flex-direction: column;
     width: calc(100vw - var(--side-space)*2);
-    margin: 100px 0;
+    margin: 40px 0;
     gap: 40px;
     background-color: var(--background-secundary-color);
     padding: calc(var(--main-margin)/3);

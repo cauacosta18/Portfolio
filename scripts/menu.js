@@ -31,58 +31,66 @@ function SelectedTab () {
     };
 }
 
-function ToggleMenu (tab) {
+function ToggleMenu (tab, state) {
     
+    if (state.main_div_active) {
 
-    let menu = document.getElementById(`menu-${tab}`);
-    let menu_active = false;
-    
-    if (tab === 1) {
-        menu_active = menu_1_active;
-    } else if (tab === 2) {
-        menu_active = menu_2_active;
-    } else if (tab === 3) {
-        menu_active = menu_3_active;
-    } else {
+        let menu = document.getElementById(`menu-${tab}`);
+        let menu_active = false;
+        
+        if (tab === 1) {
+            menu_active = menu_1_active;
+        } else if (tab === 2) {
+            menu_active = menu_2_active;
+        } else if (tab === 3) {
+            menu_active = menu_3_active;
+        } else {
 
-    }
+        }
 
-    if (!menu_active) {
-        menu.style.left = "20px";
-        menu_active = true;
-    } else {
-        menu.style.left = "-200px";
-        menu_active = false;
-    }
+        if (!menu_active) {
+            menu.style.left = "20px";
+            menu_active = true;
+        } else {
+            menu.style.left = "-200px";
+            menu_active = false;
+        }
 
-    if (tab === 1) {
-        menu_1_active = menu_active;
-    } else if (tab === 2) {
-        menu_2_active = menu_active;
-    } else if (tab === 3) {
-        menu_3_active = menu_active;
+        if (tab === 1) {
+            menu_1_active = menu_active;
+        } else if (tab === 2) {
+            menu_2_active = menu_active;
+        } else if (tab === 3) {
+            menu_3_active = menu_active;
+        }
+
     }
 
 }
 
 
 
-export function setupMenuEvents () {
+export function setupMenuEvents (state) {
+
+   
+    
+    
+    
+        
+    
     document.getElementById("shortcut").addEventListener("click", () => {
                 
-        ToggleMenu(SelectedTab());
+        ToggleMenu(SelectedTab(), state);
     })
 
     document.addEventListener("keydown", (event) => {
 
-        
-        
         if (event.key.toLowerCase() === "m" ) {
             
             let shortcut = document.getElementById("shortcut");
             shortcut.classList.add("shortcut-pressed");
             
-            ToggleMenu(SelectedTab());
+            ToggleMenu(SelectedTab(), state);
             
         }
     })
@@ -103,7 +111,7 @@ export function setupMenuEvents () {
         nav_links.forEach(nav_link => {
             nav_link.addEventListener("click", () => {
                 
-                ToggleMenu(SelectedTab())
+                ToggleMenu(SelectedTab(), state);
             })
 
 
@@ -115,7 +123,7 @@ export function setupMenuEvents () {
 
     document.getElementById("menu-btn").addEventListener("click", () => {
 
-        ToggleMenu(SelectedTab()); 
+        ToggleMenu(SelectedTab(), state);
         
     });
 
@@ -127,9 +135,10 @@ export function setupMenuEvents () {
 
             if (menu_1_active === true || menu_2_active === true) {
                 
-                ToggleMenu(SelectedTab());
+                ToggleMenu(SelectedTab(), state);
             }
         
         })
     });
+
 }

@@ -5,6 +5,7 @@
     padding: 0 var(--side-space);
     gap: 20px;
     height: 100%;
+    margin-top: 40px;
 }
 
 .art-collection h4 {

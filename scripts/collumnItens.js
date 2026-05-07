@@ -2,7 +2,7 @@ let image_selected = document.getElementById("image-selected");
 let img = document.getElementById("zoom-img");
 
 let max_img_per_collumn = 8;
-let max_img_per_collumn_design = 3;
+let max_img_per_collumn_design = 4;
 
 let scale = 1;
 let offsetX = 0;

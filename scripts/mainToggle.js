@@ -1,6 +1,5 @@
-let main_div_active = false;
 
-function ToggleMainDiv (event) {
+function ToggleMainDiv (event, state) {
 
     let tab_div = document.getElementById("tabs");
 
@@ -21,9 +20,9 @@ function ToggleMainDiv (event) {
     }
 
     
-    if (main_div_active) {
+    if (state.main_div_active) {
 
-        main_div_active = false;
+        state.main_div_active = false;
 
         let main_div = document.getElementById("main-div");
         main_div.classList.remove("div-opened");
@@ -57,7 +56,7 @@ function ToggleMainDiv (event) {
 
     } else {
 
-        main_div_active = true;
+        state.main_div_active = true;
 
         let main_div = document.getElementById("main-div");
         main_div.style.display = "flex";
@@ -84,9 +83,11 @@ function ToggleMainDiv (event) {
         let nav2 = document.getElementById("menu-2");
         nav2.style.display = "flex";
     }
+
+    return state.main_div_active;
 }
 
-function setUpMainToggle () {
+function setUpMainToggle (state) {
 
     // document.getElementById("main-title").addEventListener("click", (event) => {
     //     ToggleMainDiv(event);
@@ -96,7 +97,7 @@ function setUpMainToggle () {
 
     main_tab_btns.forEach(main_tab_btn => {
         main_tab_btn.addEventListener("click", (event) => {
-            ToggleMainDiv(event);
+            state.main_div_active = ToggleMainDiv(event, state);
         });
     });
 
@@ -106,13 +107,13 @@ function setUpMainToggle () {
 
         start_link.addEventListener("click", (event) => {
                      
-            ToggleMainDiv(event);
+            state.main_div_active = ToggleMainDiv(event, state);
         
         });
         
     });
     
-    
+    return state.main_div_active;
     
 }
 
