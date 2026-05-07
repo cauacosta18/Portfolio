@@ -69,6 +69,30 @@
     width: var(--to-change-slide-quiz);
 }
 
+#iaprendendo .slides {
+    width: var(--slides-line-iaprendendo);
+}
+
+#iaprendendo .slide {
+    width: var(--to-change-slide-iaprendendo);
+}
+
+#picklette .slides {
+    width: var(--slides-line-picklette);
+}
+
+#picklette .slide {
+    width: var(--to-change-slide-picklette);
+}
+
+#agroajuda .slides {
+    width: var(--slides-line-agroajuda);
+}
+
+#agroajuda .slide {
+    width: var(--to-change-slide-agroajuda);
+}
+
 .slider .slide {
     overflow-y: auto;
     position: relative;
@@ -161,7 +185,7 @@
 
 @media (max-width: 1200px) {
     
-    #projects .project-grid {
+    #projects .project-grid, #prototypes .project-grid {
         display: flex;
         flex-direction: column;
         

@@ -1,4 +1,4 @@
-#projects {
+.sites {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,7 @@
     box-shadow: var(--main-shadow);
 }
 
-#projects > div {
+.sites > div {
     border-bottom: 1px solid var(--font-color);
     border-top: 1px solid var(--font-color);
     background-color: var(--background-main-color);
@@ -31,7 +31,7 @@
 
 
 
-#projects .project-grid {
+.sites .project-grid {
     display: grid;
     align-items: center;
     gap: 20px;
@@ -55,7 +55,7 @@
     
 }
 
-#projects article {
+.sites article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,12 +66,12 @@
     grid-area: article;
 }
 
-#projects article h4 {
+.sites article h4 {
     font-size: 1.4em;
     font-weight: 200;
 }
 
-#projects article p {
+.sites article p {
     font-size: 0.8em;
     text-align: justify;
     line-height: 22px;

@@ -22,6 +22,9 @@
     --slides-colecao: 2;
     --slides-proxwork: 8;
     --slides-quiz: 5;
+    --slides-iaprendendo: 19;
+    --slides-picklette: 12;
+    --slides-agroajuda: 38;
 
     --slides-line-mines: calc(var(--slides-mines) * 100%);
     --slides-line-java: calc(var(--slides-java) * 100%);
@@ -29,6 +32,9 @@
     --slides-line-colecao: calc(var(--slides-colecao) * 100%);
     --slides-line-proxwork: calc(var(--slides-proxwork) * 100%);
     --slides-line-quiz: calc(var(--slides-quiz) * 100%);
+    --slides-line-iaprendendo: calc(var(--slides-iaprendendo) * 100%);
+    --slides-line-picklette: calc(var(--slides-picklette) * 100%);
+    --slides-line-agroajuda: calc(var(--slides-agroajuda) * 100%);
 
     --to-change-slide-mines: calc(100% / var(--slides-mines));
     --to-change-slide-java: calc(100% / var(--slides-java));
@@ -36,8 +42,9 @@
     --to-change-slide-colecao: calc(100% / var(--slides-colecao));
     --to-change-slide-proxwork: calc(100% / var(--slides-proxwork));
     --to-change-slide-quiz: calc(100% / var(--slides-quiz));
-
-
+    --to-change-slide-iaprendendo: calc(100% / var(--slides-iaprendendo));
+    --to-change-slide-picklette: calc(100% / var(--slides-picklette));
+    --to-change-slide-agroajuda: calc(100% / var(--slides-agroajuda));
 }
 
 @media (min-width: 768px) {

@@ -6,13 +6,17 @@ import { setupAlert } from "./alert.js";
 import { setupTabs } from "./tabs.js";
 import { setupCollumnItens } from "./collumnItens.js";
 
+let state = {
+    main_div_active: false
+}
+
 setupAge();
-setupMenuEvents();
+setupMenuEvents(state);
 addEventListeners();
 setupAlert();
 setupTabs();
 setupCollumnItens();
-setupMainToggle();
+state.main_div_active = setupMainToggle(state);
 
 
 

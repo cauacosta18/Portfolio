@@ -1,15 +1,17 @@
-#technologies {
+.list {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 40px 0;
 }
 
-#technologies h3 {
+.list h3 {
     margin: 40px;
+    margin-top: 0;
 }
 
-#technologies section {
+.list section {
     background-color: var(--highlight-color);
     width: 100%;
     
@@ -17,7 +19,7 @@
     padding: 0 var(--side-space);
 }
 
-#technologies section div {
+.list section div {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -25,16 +27,16 @@
 
 }
 
-#technologies section:not(:last-child) {
+.list section:not(:last-child) {
     margin-bottom: 20px;
 }
 
-#technologies section h4 {
+.list section h4 {
     font-size: 1.25em;
     letter-spacing: 5px;
 }
 
-#technologies section ul {
+.list section ul {
     width: fit-content;
     display: flex;
     gap: 20px;
@@ -42,7 +44,7 @@
     width: 100%;
 }
 
-#technologies section ul li {
+.list section ul li {
     border: 10px solid var(--background-secundary-color);
     width: fit-content;
     height: 80px;
@@ -58,15 +60,15 @@
     cursor: pointer;
 }
 
-#technologies section ul li:hover {
+.list section ul li:hover {
     border: 7px solid var(--background-secundary-color);
 }
 
-#technologies section ul li:active {
+.list section ul li:active {
     border: 12px solid var(--background-secundary-color);
 }
 
-#technologies ul li img {
+.list ul li img {
     height: 100%;
     width: auto;
     position: relative;
